@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family:sans-serif;
+        }
+
+        label{
+            cursor:pointer; /*Para mostrar que o label é clicável*/
+        }
+    </style>
+
+</head>
+<body>
+    <section> <!--Mais comum usar aqui do que dentro do form-->
+        <form action="#" method="get" target="_blank" autocomplete="off"> <!--Ele é um bloco e podemos ter seções, headings e paragrafos por exemplo--><!--É PROIBIDO COLOCAR UM FORMULÁRIO DENTRO DE OUTRO FORMULÁRIO--> <!--O target="_blank" é para abrir uma nova guia ao invés de abrir na mesma; já o autocomplete="off" é para que não fique mostrando o que já foi colocado nele-->
+            <h1>Cabeçalho</h1>
+            <p>O formulário</p>
+
+            <fieldset> <!--caso queira fazer um grupo de campos-->
+                <legend>Descrição</legend>
+                <p>
+                    <label for="nome_label">Nome:</label> <!--Para ser clicável, tem que ter o for para identificar o input, ou colocar o input dentro do label também-->
+                    <input type="text" id="nome_label" name="nome_backend" placeholder="Seu nome" value="Luiz Otavio" readonly /> <!--pode passar classes também--> <!--O value pode ser passado para ser um valor padrão, e assim vai para o servidor--> <!--Tem o readonly e desable, onde no disable não  será nem permitido clicar no campo, já no reeadonly será possível clicar nele mas não editar-->
+                </p>
+
+                <p>
+                    <label for="input_1">Outro tipo de input</label>
+                    <input type="checkbox" id="input_1" name="input1_backend" value="valor_padrao" checked  />
+                </p>
+
+                <p>
+                    <label for="input_2">Input radio</label>
+                    <input type="radio" id="input_2" name="input2_backend" value="valor_padrao" /> <br />
+                    <label for="input_2_1">Input radio</label>
+                    <input type="radio" id="input_2_1" name="input2_backend" value="valor_padrao" /> <br />
+                    <label for="input_2_2">Input radio</label>
+                    <input type="radio" id="input_2_2" name="input2_backend" value="valor_padrao" /> <br />
+                </p>
+
+                <p>
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data_backend" value="2020-04-20" />
+                </p>
+
+                <p>
+                    <label for="datatime">Data e hora</label>
+                    <input type="datetime-local" id="datatime" name="datatime_backend" value="2020-04-20T20:00:00" /> <!--Parece que o mozila não reconhece esse input-->
+                </p>
+
+                <p>
+                    <label for="cor">Cor</label>
+                    <input type="color" id="cor" name="cor" value="#FFFFFF" />
+                </p>
+
+                <p>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email_backend" placeholder="email@gmail.com.br" required />
+                </p>
+
+                <p>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha_backend" placeholder="Digite sua senha" required />
+                </p>
+
+                <p>
+                    <label for="foto">Foto</label>
+                    <input type="file" id="foto" name="foto_backend" accept=".png, .svg, image/*" multiple /> <!--O image é porquê ele vem antes do formato do arquivo (image é um mime type de alguns formatos de imagem)--> <!--Esse accept ajuda, mas não é garantia para todos os navegadores;;; já o multiple deixa selecionar vários arquivos-->
+                </p>
+
+                <p>
+                    <label for="numero">E-mail</label>
+                    <input type="number" id="numero" name="numero_backend" placeholder="Digite um número" min=10 max=50 step="5"/>
+                </p>
+
+                <p>
+                    <label for="url">Url</label>
+                    <input type="url" id="url" name="url_backend" placeholder="Digite uma url" />
+                </p>
+
+                <p>
+                    <label for="pesquisa">Search</label> <!--apenas semântico, não tem função atrelada a propriedade search-->
+                    <input type="search" id="pesquisa" name="pesquisa_backend" placeholder="Digite a sua pesquisa" />
+                </p>
+
+                <p>
+                    <label for="select">Select</label>
+                    <select id="select" name="select">
+                        <optgroup label="Teste">
+                            <option value ="SP" label="São Paulo">
+                            <option value="RJ" label="Rio de Janeiro" selected>
+                            <option value = "ES" label="Espírito Santo">
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="textarea">Text Area</label> 
+                    <textarea id="textarea" name="textarea" rows="8" cols="20">Não precisa colocar nada dentro da tag, porém caso coloque irá como conteúdo da tag</textarea>
+                </p>
+
+                <p>
+                    <label for="range">Range</label>
+                    <input type="range" id="range" name="range_backend" min=10 max=50 step="5"/>
+
+                    <datalist> <!--Nem sempre funciona, depende do navegador-->
+                        <option value="0" label=0%></option>
+                        <option value="10"></option>
+                        <option value="20"></option>
+                        <option value="30"></option>
+                        <option value="40"></option>
+                        <option value="50" label=50%></option>
+                        <option value="60"></option>
+                        <option value="70"></option>
+                        <option value="80"></option>
+                        <option value="90"></option>
+                        <option value="100" label=100%></option>
+                    </datalist>
+                </p>
+
+                <p>
+                    <button type="reset">Reset</buttonn>
+                    <button type="submit">Enviar</buttonn>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>

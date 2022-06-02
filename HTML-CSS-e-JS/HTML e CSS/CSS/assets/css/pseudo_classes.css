@@ -1,0 +1,81 @@
+.heading {
+    transition: all 300ms ease-in-out;
+}
+
+.heading:hover { /*as pseudo classes vem depois dos dois pontos*/
+    background: red;
+}
+
+a {
+    color: darkorange;
+}
+
+a:link{
+    color: cyan;
+}
+
+a:visited{
+    color: firebrick;
+}
+
+a:hover{
+    background:deeppink;
+    color: blue;
+    text-decoration:none;
+}
+
+a:active{
+    background: darkslategray;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus{
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    outline: none;
+    border: 1px  solid black;
+}
+
+input:disabled{
+    background-color: rebeccapurple;
+    cursor: not-allowed;
+}
+
+input:checked + p{
+    width:50px;
+    height:50px;
+}
+
+input:not(:checked) + p{
+    background:turquoise;
+}
+
+.pai .lista li:first-child{
+    background:cyan;
+}
+
+input:required{
+    background: yellow;
+}
+
+p:not(.meio){
+    background: darkgrey;
+}
+
+ul li:nth-child(even){ /*even siginifica par, odd: impar e podemos colocar o número também, considerando que aqui começa a contar pelo 1 mesmo, e não pelo 0*/
+    background-color:rebeccapurple;
+}
+
+ul li:nth-child(odd){
+    background-color:cyan;
+}
+
+ul li:nth-child(5n){ /*Podemos colocar 5n por exemplo para pular de 5 em 5*/
+    background-color:yellow;
+}
+
+ul li:nth-child(3n+3){ /*Começando do 3, selecionar de 3 em 3*/
+    background-color:green;
+}
+
+/*Lembrando que as tags são irmãs, caso fossem filhas de outra tag, não funcionaria (deve ser pelo caminho, observar)*/

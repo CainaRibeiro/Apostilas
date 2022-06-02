@@ -1,0 +1,16 @@
+p {
+    color: red;
+    background-color:yellow;
+    font-size:20px;
+    font-style: italic;
+    font-weight: bold;
+    direction: rtl; /*right to left ou ltr:  left to right*/
+    letter-spacing: 10px; /*espaçamento entre as letras*/
+    word-spacing: 20px; /*espaçamento entre as palavras*/
+    line-height: 50px; /*espaçamento entre as linhas*/
+    text-align: left; /* tem o left e right também, mas são diferentes do rtl ou ltr*/
+    text-decoration:line-through; /*pode ser o underline também*/
+    text-indent: 50px; /*Identação. Exemplo: parágrafo. OBS: caso tenha o direction, parece que não funciona o text-indent*/
+    text-shadow: -10px 10px 5px cyan; /*x, y e  blur*/
+    text-transform: capitalize; /*faz todas as primeiras letras das palavras fiicarem maiúsculas, mas tem o uppercase e o lowercase também, assim como outras propriedades na documentação*/
+}

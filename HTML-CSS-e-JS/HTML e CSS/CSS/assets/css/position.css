@@ -1,0 +1,66 @@
+/*
+POSITIONS:
+static e relative já explicado no código;
+absolute: não considera que o elemento está mais na posição anterior: funciona como se fossem camadas
+fixed: mesmo que a página role para baixo, ele continua fixo. Tudo o que tem no absolute, tem no fixed, a diferença é que o fixed fica fixado
+sticky: no código
+*/
+
+* {
+    margin: 0;
+}
+
+ul {
+    height: 100px;
+    overflow: auto;
+}
+
+ul li.sticky {
+    position: sticky;
+    background: gray;
+    top: 0;
+}
+
+.pai {
+    height:300vh;
+}
+
+.filha1, .filha2, .filha3 {
+    width: 300px;
+    height: 300px;
+    background: red;
+    margin:10px;
+    position:static; /*por padrão vem o static*/
+}
+
+.filha3 {
+    background: blue;
+    position: relative;
+    top: 100px;
+}
+
+.outra {
+    position:absolute; /*não acontece nada pois respeita a relatividade do elemento pai*/
+    font-size: 50px;
+    background: white;
+    top: 50px;
+    left: 50px;
+    right:70px;
+    bottom: 40px;
+}
+
+.filha2 {
+    position:relative; /*para que trabalhemos com camadas é importante considerarmos o position, e também usamos o z-index abaixo*/
+    z-index:1; /*como se essa classe estivesse na camada 1 (abaixo da 2). E podemos usar o -1 por exemplo, para deixar atrás dos elementos da página*/
+    background:greenyellow;
+}
+
+.filha1 {
+    position: absolute;  /*posição relativa referente  aos elementos da página*/
+    /*abaixo é sempre considerando a viewport, ou seja a direita da viewport, esquerda, topo ou abaixo*/
+    top: 50%; /*considerando a margem*/
+    margin-top: -150px; /*para a div ficar no meio, considerando que ela tem 300px de altura*/
+    left: 50%; /*se a position for static, não funciona*/
+    margin-left: -150px; /*para a div ficar no meio, considerando que ela tem 300px de largura*/
+    z-index:2;
+}

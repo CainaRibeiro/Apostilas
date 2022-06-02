@@ -1,0 +1,18 @@
+html, body {
+    height: 100%; /*Tem que fazer isso porquê esses elementos seguram a classe texto abaixo, não deixando fazer a mesma coisa que o width, porém nem sempre funciona e por isso usamos como acima*/
+}
+
+.texto {
+    box-sizing: border-box; /*Por padrão vem o "content-box", onde tudo é somado, e não tudo já está somado no total; existe também o padding onde já está somado e o border-box, onde só não soma a margin*/
+    background:red;
+    width: 100%;
+    max-width: 800px;
+    min-width: 0;
+    max-height: 600px;
+    min-height: 200px;
+    height: 100%; /*100% do tamanho do viewport*/
+    margin:30px auto 50px auto;
+    overflow: auto; /*Barra de scroll caso precise para algum dos eixos*/
+    padding: 30px 20px;
+    border: 5px solid black
+}

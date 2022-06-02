@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+
+        nav {
+            /*height:50px; */ /*Podemos remover para que seja usado no "a" e assim definir o tamanho da nav*/
+            background: rgba(0,0,0,0.5);
+        }
+
+        body nav ul li a{ /*Muito específico, porém no caso poderia apenas usar o nav a, pois senão o "a" tem prioridade*/
+            color:#ffffff;
+            text-decoration: none;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*Mais utilizada pois pega todas as fontes sans-serif dos sistemas peracionais*/
+            padding: 10px 20px;
+            display: block; /*Para que o "a" defina o tmanho da nav*/
+            text-transform: uppercase;
+        }
+
+        nav a:hover{
+            background: rgba(0,0,0,0.1);
+        }
+
+        nav{
+            display:flex;
+            /*justify-content: center; */ /*não precisa, já que queremos o menu pelo canto mesmo e tem o align-items:center abaixo*/
+            align-items:center;
+        }
+
+        nav ul{
+            display: flex; /*por padrão vem: flex-direction: row; para que seja alinhados por linha, porém tem o column e column-reverse por exemplo, para ser alinhado por coluna ou por coluna mas em ordem inversa*/
+            list-style: none;
+            background:red;
+            margin-left:12px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+
+    <ol type="I"> <!--Podemos colocar um "i", "a" ou "1" usando um start="numero" ou não-->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <dl> <!--Description list-->
+        <dt>Café</dt> <!--Termo-->
+        <dd>Bebida preta quente</dd> <!--Descrição-->
+        <dt>Nescau</dt>
+        <dd>Chocolate preto quente</dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="pt-BR">
+    <head> <!--trata de metadados dos meus dados-->
+        <meta charset="utf-8" /> <!--Codificação de caracteres padrão que usamos-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Deve ser para o navegador Edge-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Introduzida pela apple (safari mais especificamente): tag bem avançada usada para a tela se adaptar a diferentes dispositivos móveis-->
+        <title>Meu html</title>
+
+        <style>
+            h1 {
+                background:red;
+            }
+            h1{ /*Como veio outro background depois, depois, ele mudará para azul*/
+                background:blue;
+            }
+            #cabecalho-um{
+                background:purple;
+            }
+
+            #cabecalho-dois{
+                background:green;
+            }
+
+            .fundo-vermelho{
+                background:red;
+            }
+
+            .imagem-link{
+                width:50px;
+                height:44px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--Importância dos headers (as tags menos importantes podem ser filhas de outras mais importantes). Não tem nada a ver só com o tamanho-->
+        <h1 id="cabecalho-um">Meu título</h1> <!--O id é único-->
+        <p> <!--Block, ou seja comportamento de bloco, diferente do span abaixo-->
+            <b>Lorem ipsum</b>, dolor sit amet consectetur <spam style="color:red;">adipisicing elit. Quos delectus debitis</spam>, perferendis autem maxime veritatis <code>console.log</code> <!--Mostra com uma fonte diferente apenas--> soluta, distinctio dignissimos adipisci, recusandae <spam class="fundo-vermelho">omnis nesciunt. Numquam, dolorum.</spam> Dolore inventore velit quasi! Velit, quas.
+        </p>
+
+        <pre> <!--Tag pré formatada, ou seja, irá com espaços e quebras de linhas OBS: notar que considera até os tabs, para que não considere, temos que remove-los-->
+            <code>
+                const resultado = nota => nota >=7 ? 'Aprovado' : 'Reprovado'
+
+                /* Sem usar função:
+                    resultado = nota >=7 ? 'Aprovado' : 'Reprovado'
+                */
+
+                console.log(resultado(7.1))
+                console.log(resultado(6.7))
+            </code>
+        </pre>
+
+        <h2 id="cabecalho-dois" class="fundo-vermelho">Meu título</h2><!--O background da classe fundo-vermelho, não será aplicado, pois o id tem prevalencia maior, OU usar o !important depois do green e antes do ponto e vírgula, que NÃO É NADA RECOMENDADO, pois estará forçando o navegador a usar um estilo que desejamos-->
+        <h3 style="background: brown;">Lorem ipsum, dolor sit amet consectetur</h3>
+        <h3>Lorem ipsum, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dolor sit amet consectetur</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur</h3>
+        <h4>Meu título 2<sup>2</sup></h4>
+        <h5>Meu título H<sub>2</sub>O</h5>
+        <h6>Meu título</h6>
+
+        <hr />
+
+        <h2>Cabeçalho 2</h2> 
+
+        <p> <!--Block, ou seja comprtamento de bloco, diferente do spam abaixo-->
+            <b>Lorem ipsum</b>, dolor sit <strong>amet</strong> <i>consectetur adipisicing</i> elit. <em>Quos delectus debitis, perferendis <small>autem maxime</small> veritatis soluta, distinctio</em>. <q cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a">dignissimos <del>adipisci, recusandae omnis nesciunt</del>. <br /><ins>Numquam, dolorum</ins>. </q> <s>Dolore inventor</s> <u>velit quasi!</u> Velit, quas.
+        </p>
+
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element" target='_blank'>link</a> <!--O target é para como será aberto o link, que no caso é abrindo uma nova aba-->
+
+        <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="Logo da MDN" width="50" height="44" /> <!--O alt é para descrever a  imagem-->
+
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element">
+            <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="Logo da MDN"class="imagem-link"/>
+        </a>
+
+        <div>
+            Tag de bloco (container genérico, assim como a spam, porém a div é de bloco (block) e a spam, inline)
+        </div>
+
+        <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a">Aqui estou fazendo um bloco de citação</blockquote>
+
+        <spam class="fundo-vermelho borda-esquerda">Marcelo Blanc</spam> <!--Inline-->
+        <spam class="fundo-vermelho">Marcelo Blanc</spam>
+        <spam class="fundo-vermelho borda-direita">Marcelo Blanc</spam>
+        <spam class="fundo-vermelho">Marcelo Blanc</spam>
+    </body>
+</html>

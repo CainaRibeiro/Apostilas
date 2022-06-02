@@ -1,0 +1,58 @@
+/* medidas relativas:
+em: explicado no código
+rem: explicado no código
+vw: largura da viewport: 100vw = 100% da largura do viewport
+vh (bem utilizado): altura da viewport: 100hw = 100% da altura do viewport
+%: de acordo com o elemento pai: caso tenha um elemento filho com uma porcentagem também, ele irá considerar a porcentagem do elemento pai
+vmin (menor parte (largura ou altura) do viewport): 2vmin = 2% da largura ou altura menor da tela. Ex.: 2vmin = 2% de 1000 = 20px
+vmax (maior parte (largura ou altura) do viewport): 2vmax = 2% da largura ou altura maior da tela. Ex.: 2vmax = 2% de 1000 = 20px
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /*Equivale a 10px porquê é 62.5% do padrão de 16px*/ /*Geralmente vem como 100% ou é padrão deixar com 100%, porquê aí se adapta a como o usuário do navegador quer ver*/ /*Os 100% equivale a 16 px*/
+    scroll-behavior: smooth; /*scroll mais suave ao clicar nos links que levam aos ids do html*/
+}
+
+.pai{
+    width: 100vw;
+    height: 100vh;
+    background: yellow;
+    font-size: 50px; /*Se mudar para uma medida relativa como o "1em" no elemento pai mais próximo, ele terá a mesma medida: 50px; assim como podemos usar 0.5em, 0.25em entre outras*/
+}
+
+.pai > div {
+    width: 50%;
+    height: 50rem;
+    background: blue;
+}
+
+.color-one {
+    width: 100vw;
+    height: 100vh;
+    background: green;
+    font-size: 50px;
+}
+
+.color-two {
+    width: 100vw;
+    height: 100vh;
+    background: cyan;
+    font-size: 50px; 
+}
+
+p {
+    font-size: 20px;/*unidade de medida absoluta, ou seja: não mudará no navegador caso aumente a fonte nas configurações*/
+}
+
+.em {
+    font-size: 1em;
+}
+
+.rem {
+    font-size: 1.6rem; /*Além do em, existe o rem, que é se baseando no elemento root e não o mais próximo*/
+}

@@ -1,0 +1,19 @@
+Anotações HTML
+
+ - numa tag que não tem corpo (fechamento), dentro dela primeiro vem o atributo com ou não valor(es) dentro de aspas;
+
+ - em web é comum usar um traço ao invés do camelCase
+
+  - Geralmente dentro de um parágrafo, não colocamos outro elemento que é de bloco, mas elementos inline
+
+  - a tag strong e b são diferentes, a strong serve para ser lida mais forte por exemplo, quando se trata de acessibilidade, já a tag b não, por ser um estado físico, e não lógico como a strong
+
+  - a diferença da tag i para a tag em por exemplo é a mesma da de cima comparando o b com o strong, respectivamente.
+
+  - existe também as tags del e ins, e s e u; onde as duas últimas é como se fossem a tag b (ou bold) e as duas primeiras, a tag strong
+
+TAGS PARA SEREM USADAS FORAS DE UMA TAG INBLOCK:
+
+ <blockquote>Aqui estou fazendo um bloco de citação</blockquote>
+
+ Documentação das tags HTML: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element

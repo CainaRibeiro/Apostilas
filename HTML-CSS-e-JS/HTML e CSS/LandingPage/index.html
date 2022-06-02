@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/elements.css" />
+    <link rel="stylesheet" href="./assets/css/variaveis.css" />
+    <link rel="stylesheet" href="./assets/css/classes.css" />
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <title>Landing Page</title>
+</head>
+
+<body>
+
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button" />
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <div class="menu white-bg">
+        <section class="main-content menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;"><a href="#home" >LOGO</a></h1>
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#intro" >Intro</a></li>
+                    <li><a href="#grid-one" >Grid one</a></li>
+                    <li><a href="#gallery" >Gallery</a></li>
+                    <li><a href="#grid-two" >Grid two</a></li>
+                    <li><a href="#pricing" >Pricing</a></li>
+                    <li><a href="#contact" >Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+
+    <div class="menu-spacing">
+
+    </div>
+
+    <section id="home" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>O navegador é apenas o começo</h2>
+                <p>
+                    Navegação realmente privativa. O Firefox bloqueia automaticamente mais de 2000 rastreadores, impedindo que coletem informações sobre o que você faz online.
+                </p>
+            </div>
+            <div class="intro-img">
+                <img src="assets/img/javascript-not-optimized.svg"  alt="logos do html, css e js sendo segurados cada um por uma pessoa" />
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="white-bg section">
+        <div class="main-content top3-content">
+            <h2>Nenhuma política de privacidade</h2>
+            <p>
+                Nenhuma política de privacidade obscura nem acesso escondido para anunciantes. Apenas um navegador extremamente rápido, que não vende você como produto.
+            </p>
+            <p>
+                Tenha toda a velocidade e ferramentas sem invasão de privacidade. O Navegador Firefox coleta tão poucos dados sobre você, que não precisamos nem do seu endereço de email para baixar. Isso porque, diferente de outros navegadores, não temos interesse financeiro em te seguir pela web.
+            </p>
+            <p>
+                Tenha toda a velocidade e ferramentas sem invasão de privacidade. O Navegador Firefox coleta tão poucos dados sobre você, que não precisamos nem do seu endereço de email para baixar. Isso porque, diferente de outros navegadores, não temos interesse financeiro em te seguir pela web.
+            </p>
+        </div>
+    </section>
+
+    <section id="grid-one" class="grid-one main-bg section">
+        <div class="main-content grid-one-content" >
+            <h2 class="grid-main-heading" >My grid</h2>
+            <p class="grid-description" >Uma breve descrição</p>
+            <div class="grid">
+                <article>
+                    <h3>Teste 1</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ex non iste nesciunt maxime labore culpa ipsa, delectus similique quas dolore ipsum fugit quia veritatis, porro iure id, optio amet!
+                    </p>
+                </article>
+                <article>
+                    <h3>Teste 2</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ex non iste nesciunt maxime labore culpa ipsa, delectus similique quas dolore ipsum fugit quia veritatis, porro iure id, optio amet!
+                    </p>
+                </article>
+                <article>
+                    <h3>Teste 2</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ex non iste nesciunt maxime labore culpa ipsa, delectus similique quas dolore ipsum fugit quia veritatis, porro iure id, optio amet!
+                    </p>
+                </article>
+            </div>
+        </div>
+    </sectiton>
+
+    <section id="gallery" class="grid-one white-bg section">
+        <div class="main-content grid-one-content" >
+            <h2 class="grid-main-heading" >Gallery</h2>
+            <p class="grid-description" >Uma breve descrição</p>
+            <div class="grid">
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=1" alt="imagem gerada de forma aleatória" />
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=2" alt="imagem gerada de forma aleatória" /> <!--Passando qualquer parâmetro por get por causa do cache do navegador e assim mostrar imagens diferentes (?r=numero)-->
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=3" alt="imagem gerada de forma aleatória" />
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=4" alt="imagem gerada de forma aleatória" />
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=5" alt="imagem gerada de forma aleatória" />
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=6" alt="imagem gerada de forma aleatória" />
+                </div>
+            </div>
+        </div>
+    </sectiton>
+    
+    <section id="grid-two" class="grid-one main-bg section">
+        <div class="main-content grid-one-content" >
+            <h2 class="grid-main-heading" >My grid</h2>
+            <p class="grid-description" >Uma breve descrição</p>
+            <div class="grid">
+                <article>
+                    <h3>Teste 1</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ex non iste nesciunt maxime labore culpa ipsa, delectus similique quas dolore ipsum fugit quia veritatis, porro iure id, optio amet!
+                    </p>
+                </article>
+                <article>
+                    <h3>Teste 2</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ex non iste nesciunt maxime labore culpa ipsa, delectus similique quas dolore ipsum fugit quia veritatis, porro iure id, optio amet!
+                    </p>
+                </article>
+                <article>
+                    <h3>Teste 2</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ex non iste nesciunt maxime labore culpa ipsa, delectus similique quas dolore ipsum fugit quia veritatis, porro iure id, optio amet!
+                    </p>
+                </article>
+            </div>
+        </div>
+    </sectiton>
+
+    <section id="pricing" class="white-bg section">
+        <div class="main-content top3-content">
+            <h2>Pricing</h2>
+            <p>
+                Nenhuma política de privacidade obscura nem acesso escondido para anunciantes. Apenas um navegador extremamente rápido, que não vende você como produto.
+            </p>
+            <p>
+                Tenha toda a velocidade e ferramentas sem invasão de privacidade. O Navegador Firefox coleta tão poucos dados sobre você, que não precisamos nem do seu endereço de email para baixar. Isso porque, diferente de outros navegadores, não temos interesse financeiro em te seguir pela web.
+            </p>
+            <div class="responsive-table">
+                <table>
+                    <caption>Pricing table</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Title 1</th>
+                            <th>Title 2</th>
+                            <th>Title 3</th>
+                            <th>Title 4</th>
+                            <th>Title 5</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Testando</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>O navegador é apenas o começo</h2>
+                <p>
+                    Navegação realmente privativa. O Firefox bloqueia automaticamente mais de 2000 rastreadores, impedindo que coletem informações sobre o que você faz online.
+                </p>
+            </div>
+            <div class="intro-img">
+                <img src="assets/img/javascript-not-optimized.svg"  alt="logos do html, css e js sendo segurados cada um por uma pessoa" />
+            </div>
+
+            <div class="contact-form">
+                <fieldset class="form-grid">
+                    <legend>Contact me</legend>
+
+                    <div class="form-group">
+                        <label for="first-name">First name: </label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Your first name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last name: </label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Your last name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail: </label>
+                        <input type="email" name="email" id="email"  placeholder="Your e-mail" />
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit">Send message</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer white-bg">
+        <p><a target="_blank" href="https://www.linkedin.com/in/marcelo-blanc-moreira-3274a51b1/">Feito com <span class="heart">❤</span> por Marcelo Blanc</a></p>
+    </footer>
+
+    <a class="back-to-top" href="#">↪</a>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document e Netflix</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #heading { /*apenas para quando é filha direta, se tiver uma div depois, irá "quebrar o codigo", pois as divs serão filhas diretas, e não as filhas dessa div. Para que as filhas da div se comportem dessa forma, fazer como abaixo colocando o caminho*/
+            background:rgba(0,0,0, 0.4);
+        }
+
+        #heading div{
+            width: 80%;
+            margin:0 auto;
+            display:flex; /*começa a se comportar de uma maneira diferente*/
+            justify-content:space-between;
+        }
+
+        body{
+            background-image: url(https://tecnoblog.net/wp-content/uploads/2018/12/cartoes-netflix.jpg);
+            background-size: cover;
+            background-position: top center;
+        }
+
+        #heading .h1{ 
+            font-size:20px;
+            text-transform:uppercase;
+            padding: 15px 0;
+            /*
+            padding-top:20px;
+            padding-left:15px;
+            padding-bottom:20px;
+            padding-right:15px;
+            OU padding:20, 15, 20, 15; topo, direita, em baixo e esquerda OU paddin: numero para ficar tudo igual*/
+        }
+
+        #heading a { /*caminho: dentro de um id heading, os "a"*/
+            color:#fff;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <!--
+    <h4>O float serve para deixar as caixas filhas abaixo por exemplo, dentro das caixas pais; porém há maneiras mais modernas de fazer isso</h4>
+    <div style="width: 120px; height:120px; background: green;">
+        <p>1ª caixa</p>
+        <div style="width: 60px; height:60px; background: blue; float: left; text-align: center;">
+            <p>2ª caixa</p>
+        </div>
+        <div style="width: 60px; height:60px; background: yellow; float: left;">
+            <p>3ª caixa</p>
+        </div>
+        <div style="width: 60px; height:60px; background: turquoise; float: left;">
+            <p>4ª caixa</p>
+        </div>
+    -->
+        <header id="heading">
+            <div>
+                <h1 class="h1">
+                    <a href="#">Netflix</a>
+                </h1>
+                <h2 class="h1 na direita">
+                    <a href="#">Netflix</a>
+                </h2>
+            </div>
+        </header>
+
+    </div>
+</body>
+</html>

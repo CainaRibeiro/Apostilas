@@ -1,0 +1,40 @@
+/*Geralmente colocamos pseudo elementos com dois pontos e pseudo classes com apenas 1, mas os dois funcionam com 1 e não especificamente como a convenção*/
+
+ul li::after{
+    content: ' - ';
+    background:  cyan;
+    color: brown;
+    display: block;
+}
+
+ul li::before{
+    content: ' / ';
+    background:  cyan;
+    color: brown;
+    display: block;
+}
+
+p {
+    font-size: 24px;
+}
+
+p::first-letter {
+    font-size: 100px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+p::first-line {
+    background: turquoise;
+}
+
+p::selection {
+    background: black;
+    color:white;
+    font-size: 50px;
+}
+
+::placeholder { /*Pode pegar pela classe, tag, id, atributos, ou até mesmo apenas o placeholder como foi utilizado*/
+    color: darkturquoise;
+}

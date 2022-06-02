@@ -1,0 +1,39 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.pai h1+spam{  /*Adjacent sibling selector: Irmãos*/ /*Um spam (ou qualquer elemento) que vier depois de um h1*/
+    color: red;
+}
+
+.pai p+h1{
+    color: yellow;
+}
+
+.pai h1~p{ /*General sibling selector: Irmãos*/ /*Todos elementos p que vierem depois de um h1, dentro da classe pai*/
+    color: green;
+}
+
+[meu-atributo = "valor"]{  /*Selecionando um atributo criado por mim*/ /*Se especificar um valor, é mais específico ainda determinar o comportamento da página, pois ele talvez possa mudar com JS por exemplo*/
+    color:red;
+}
+
+[meu-atributo-2~="valor2"]{ /*Selecionar algum valor*/
+    color:cyan;
+}
+
+/*Parece não ser muito usual, de acordo com o professor
+[meu-atributo-3 |= "qualquerCoisa"] { Para saber se há depois de valor, um traço Ele deve ser o primeiro no html, senão não funciona
+    color:red;
+} /*
+
+/*Parece ser melhor e mais usado que o de cima*/
+[meu-atributo-3 ^= "qualqu"]{ /*Se o atributo começar com qualqu já funciona, não precisa ter espaço nem traço*/ /*Existe também o $ para saber se termina com alguma coisa e o * que é o "contém", para caso haja o que for passado depois dele (depois de *=)*/
+    color:blue;
+}
+
+[checked] { /*Apenas um exemplo para mostrar que da pra usar atributos padrões também, mas caso queiramos fazer essa seleção, usaremos uma pseudo classe chamada de checked*/
+    width: 50px;
+    height:50px;
+}

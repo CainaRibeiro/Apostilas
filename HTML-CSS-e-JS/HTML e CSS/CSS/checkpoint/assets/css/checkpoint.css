@@ -1,0 +1,114 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    /*Pode colocar aqui o:*/
+    /*box-sizing: border-box;*/
+}
+
+body {
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.grid::after{
+    content: '';
+    display:block;
+    clear: both;
+}
+
+.grid {
+    box-sizing:border-box;
+    padding:15px;
+    padding-top: 73px;
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+.grid .col {
+    box-sizing: border-box;
+    width: 33.33%;
+    height: 300px;
+    float:left; /*"flutua" para a esquerda*/
+    padding:15px;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+.menu {
+    width:100%;
+    position:fixed;
+    background:rgba(0, 0, 0, 0.8);
+
+}
+
+.menu ul {
+    padding:0 30px;
+    margin: 0 auto;
+    list-style:none;
+    display: block;
+    max-width: 1200px;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color:white;
+    margin: 0 auto;
+    padding: 20px;
+    text-decoration:none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover {
+    background: #333;
+}
+
+.full-page {
+    box-sizing:border-box;
+    padding: 0 30px;
+    padding-top: 73px;
+    max-width:100%;
+    margin: 0 auto;
+    height: 100vh;
+    background: turquoise;
+}
+
+.full-page-content {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+/*pode usar o and, screen, only, not entre outras palavras reservadas, porém damos preferência a algo mais simples como abaixo:*/
+@media (max-width:  320px) { /*quando não colocamos nada antes dos parenteses, é como se tivessemos colocado: all and (), que significa: para todos os dispositivos e ()*/
+    /*até 320 pixels*/
+    .grid .col {
+        width: 100%;
+    }
+}
+
+@media (min-width:  321px) and (max-width: 768px) { /*a partir de 320 pixels até 768*/
+    .grid .col {
+        width: 50%;
+    }
+}
+
+@media (min-width:  769px) { /*a partir de 769 pixels*/
+    .grid .col {
+        width: 33.33%;
+    }
+}
+
+p { /*Nem sempre conseguimos colocar essa propriedade nesse elemento, por isso usamos um pseudo-elemento*/
+    clear: both; /*Usa apenas o espaço livre da esquerda, direita ou os dois*/
+}

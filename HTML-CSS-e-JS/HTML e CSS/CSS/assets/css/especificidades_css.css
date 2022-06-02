@@ -1,0 +1,53 @@
+/* ESPECIFICIDADE
+Ordem de especificidade:
+- ID;
+- Classes, atributos e pseudo-classes
+- Elementos e pseudo-elementos
+
+IPC: Caso use o "style" no html, a especificidade será sobreposta a qualquer uma usando id, classes, elementos ou o que está descrito acima.
+
+IPC: O !important usando abaixo, irá sobrepor o style do html, e caso seja usada de novo, o que desempatará será a especificidade de cada uma, a que for maior vencerá. Caso a especificidade seja a mesma, o que valerá será a que vier depois.
+
+IPC: Evitar usar o !important, e só usar em último caso.
+
+DICA: Preferir as classes porquê caso haja alguma especificidade próxima, tem mais chances de empatar ou não dar problemas no código.
+
+Caso haja alguma dúvida, podemos ver a documentação sobre especificidade: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+
+*/
+
+#p { /*Resultado da especificidade: 100*/
+    background:red;
+}
+
+.p{ /*Resultado da especificidade: 010*/
+    background: yellow;
+}
+
+#p2.p2{ /*Precisa ter a classe p2 e o id p2*/ /*Resultado da especificidade: 110*/
+    background: turquoise;
+}
+
+p#p2{ /*Precisa ter o elemento p e o id p2*/ /*Resultado da especificidade: 101*/
+    background: blue;
+}
+
+p#p3{ /*Resultado da especificidade: 101*/
+    background: grey;
+}
+
+p#p3.p3{ /*Resultado da especificidade: 111*/
+    background: green;
+}
+
+#b p#p3.p3{ /*Resultado da especificidade: 211 porquê tem 2 ids 1 classe e 1 elemento*/
+    background: turquoise;
+}
+
+body#b p#p3.p3{ /*Resultado da especificidade: 212 porquê tem 2 ids 1 classe e 2 elementos*/
+    background: yellow;
+}
+
+body#b.bclass p#p3.p3{ /*Resultado da especificidade: 222 porquê tem 2 ids 2 classes e 2 elementos*/
+    background: cyan;
+}

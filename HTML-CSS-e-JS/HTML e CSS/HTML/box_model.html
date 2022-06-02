@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .section-one,
+        .section-two{ /*Para usar as duas classes ou dois id (separando por vírgulas)*/
+            box-sizing:border-box; /*Para que a largura e altura seja somando o border e padding (OBS: não soma os margins)*/
+        }
+
+        .section-one{
+            width:500px;
+            padding:15px;
+            margin:30px;
+            border: 5px solid black;
+            background-color: deeppink;
+            background-image: url(https://assets.unenvironment.org/styles/article_billboard_image/s3/2021-05/alberta-2297204_1920.jpg?h=1483c54f&amp;itok=GdjA9GRu);
+            background-size:cover;
+            background-position:center center;
+            color: #fff;
+        }
+
+        .section-two{
+            background: cyan;
+            width:500px;
+            padding:15px 0 0 0;
+            margin:50px; /*as margens não são somadas, apenas usada a maior*/
+            /*border: 5px solid black;*/
+            border-style:solid;
+            border-width: 10px;
+            border-bottom-width: 30px;
+            border-top-color: firebrick;
+            border-right-color: blue;
+            border-bottom-color: green;
+            border-left-color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="section-one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, perspiciatis. Laboriosam, suscipit deleniti aliquam optio quod ex ipsam nam eius et sint cupiditate consectetur rerum quidem eos fugiat aliquid atque?</section>
+    <section class="section-two">2</section>
+</body>
+</html>

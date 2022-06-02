@@ -1,0 +1,13 @@
+/*
+O que é herdado por outras tags (pode ser através de ids e classes também por exemplo):
+color, font-family e outras
+
+Para não ser herdado, podemos usar na tag que será herdada, a palavra "initial" na classe, id, tag ou onde seria herdado, seja o color, font-family, font-size ou outo. Exemplo: color:initial; ao contrário podemos usar o inherit.
+
+Site interessante sobre o que é herdado: https://www.sitepoint.com/css-inheritance-introduction/
+
+Documentação sobre nos sites MDN e W3schools:
+- https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
+- https://www.w3schools.com/cssref/css_inherit.asp
+
+*/

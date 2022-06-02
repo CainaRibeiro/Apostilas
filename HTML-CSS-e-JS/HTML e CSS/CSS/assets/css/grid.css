@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 40px;
+}
+
+.grid {
+    width:700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr 2fr; /*além de porcentagem, podemos usar 1fr também, que quer dizer 1 fragmento ou 1 espaço em branco*/ /*pode passar o tamanho das colunas na ordem*/ /*podemos usar o repeat(10, 1fr) por exemplo para repetir 10 fragmentos de 1fr ou repeat(3, 1fr 2fr) para repetir 3 vezes (3 colunas) com o 1 e o 2*/
+    gap: 30px; /*espaçamento entre a grid (usado para facilitar esse epaçamento ao invés do margin (e depois o margin-right: -30px por exemplo para resolver o problema) por exemplo)*/
+    /*existe apenas o espaçamento entre as linhas e colunas, como: row-gap ou column-gap*/
+}
+
+.grid div {
+    /*podemos usar funções do css por exemplo: (abaixo  é usado uma para resolver um problema de espaçamento da grid por exemplo (envolvendo a div numa outra que seja um container))*/
+    width: calc(100% + 30px);
+    background: tomato;
+}
+
+.grid2 {
+    width:100%;
+    display: grid;
+    grid-template-rows: [um] 2fr [dois] 1fr [tres] 3fr [quatro]; /*pode ou não nomear (criar variáveis) usando os colchetes (o quatro é  porquê há uma 4ª linha para finalizar)*/
+    /*Mais utilizado abaixo e sem usar variáveis, foi apenas mostrado para informar que existe como criar variáveis e também o start e end das linhas e colunas*/
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /*1 fragmento para o tamanho mínimo de 320 pixels, mas para que não precise arrastar pro lado, usamos o auto-fill para que se comporte de acordo com o tamanho da tela (do grid)*/
+    grid-template-rows: 2fr 1fr 3fr; /*1ª linha com 3 fragmentos, 2ª com 1 e 3ª com 3 ou usar o repeat mas agora será com as linhas (rows)*/
+    gap: 30px; /*espaçamento entre a grid*/
+}
+
+.grid2 div {
+    background: green;
+}
+
+.grid2 div:nth-child(5), .grid2 div:nth-child(9) { /*usando colunas*/
+    background: darkseagreen;
+    grid-column-start: dois; /*usando as variáveis declaradas*/
+    grid-column-end: quatro; /*coloca uma coluna a mais*/
+    /*o  grid-colum é o atalho para não precisar escrever o start e o end (também tem o grid-area para usar respectivamente o start e end da linha e start e end da coluna, mas usando /, assim: grid-column: 2 / 6 / dois / quatro; assim como podemos usar o span em cada*/
+    grid-row-start: 2; /*Pode servir para colocar uma coluna por cima da outra caso seja aplicado nos dois*/
+    grid-row-end: 6;
+    /*pode colocar grid-row ou grid-column, passando um span 3 por exemplo para ocupar 3 linhas ou colunas*/
+}
+
+.grid2 div:nth-child(5) { /*usando colunas*/
+    background: darkseagreen;
+    z-index: 1;
+}
+
+.grid2 div:nth-child(9) { /*usando colunas*/
+    background: yellow;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .grid2 div:nth-child(5) { /*usando colunas*/
+        background: blue;
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+}

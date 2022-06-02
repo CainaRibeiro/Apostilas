@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container { /*o container possui um display flex*/
+    height:900px;
+    width:100%;
+    display: flex; /*o flex do tipo block, mas também tem do tipo inline-flex que é do tipo inline*/
+    /*propriedades do display flex: os 5 abaixo mais o gap*/
+    flex-direction: row; /*Também tem o collumn e o -reverse para cada um também*/
+    justify-content: flex-start; /*existe também o flex-end, center, space-around, space-between*/ /*Sempre que estiver falando do main-axis (eixo principal), estará falando do justify-content*/
+    align-items: flex-start; /*cross-axis = eixo perpendicular*/ /*Existe também o flex-start, flex-end, center e baseline (linha em baixo dos elementos para alinhar)*/ /*o strech estica os elementos*/ /*Alinha os itens*/
+    align-content: center; /*Alinha o conteúdo e tambeḿ tem o flex-start, flex-end, center, space-around, space-between, stretch, inherit (se quiser herdar de um elemento), initial e unset*/
+    flex-wrap: nowrap; /*com o wrap, se não tiver espaço na linha, não haverá um overflow, mas sim quebrará a linha*/
+    background: yellow;
+    /*gap: 30px;*/ /*nem todos os navegadores funcionam*/
+
+    /*existe um atalho para o flex-direction e flex-wrap, sendo respectivamente: flex-flow: row wrap;*/
+}
+
+.flex-item {
+    flex-grow: 1; /*Os elementos se acomodarão de acordo com o espaço que tiver na tela para todos os elementos, mas o flex-wrap e o gap devem estar desabilitados*/
+    flex-basis: 200px; /*para reservar um espaço mínimo antes do flex-grow*/
+    flex-shrink: 1; /*1 permite que o elemento diminua, mas se for 0, não permitirá*/
+    /*pode usar o flex: 1, 1, 200px; como atalho sendo o primeiro sendo o grow, segundo: shrink e terceiro o basis*/
+    width:100%;
+    height:100px;
+    color: white;
+    background:red;
+}
+
+.flex-item:nth-child(2) {
+    flex: 10, 1, 200px; /*O item 2 aumenta mais de acordo com o espaço em branco sendo disponibilizado*/
+    background:purple;
+    align-self: flex-end; /*alinhar de forma diferente dos outros elementos*/
+}
+
+.flex-item:nth-child(3) {
+    align-self: center; /*alinhar de forma diferente dos outros elementos*/
+}
+
+/*Trabalhar com números positivos é melhor do que abaixo, porém é possivel como mostrado*/
+.flex-item:nth-child(1) {
+    /*order: -1;*/ /*muda a ordem para o final da fila por exemplo (1, já o -1 o item 1 vai pro início da fila já que não tem ninguém maior do que ele)*/
+    order: -3;
+}
+
+.flex-item:nth-child(2) {
+    order: -4;
+}
+
+.flex-item:nth-child(3) {
+    order: -1;
+}
+
+.flex-item:nth-child(4) {
+    order: -2;
+}
